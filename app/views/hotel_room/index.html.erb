@@ -1,0 +1,24 @@
+<table>
+  <thead>
+    <tr>
+      <th>Hotel</th>
+      <th>No.of rooms</th>
+      <th>Room type</th>
+      <th>Cost per day</th>
+
+     
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @hotel_room.each do |hotel_room| %>
+      <tr>
+        <td><%= hotel_room.name %></td>
+        <td><%= hotel_room.rooms %></td>
+        <td><%= hotel_room.room_type %></td>
+        <td><%= hotel_room.cost %></td>
+        <td><%= link_to 'click here for booking',new_booking_path(hotel_room_id: hotel_room) %></td>
+
+    <% end %>
+  </tbody>
+</table>
